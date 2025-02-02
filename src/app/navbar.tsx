@@ -1,7 +1,6 @@
 'use client'
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@heroui/react";
-import { useState } from "react";
 
 export const LumosLogo = () => {
   return (
@@ -19,10 +18,13 @@ export const LumosLogo = () => {
 export default function App() {
     return (
         <Navbar>
-        <Button
-        >
+          <Button
+            disableRipple
+            disableAnimation
+            className="bg-transparent p-0"
+          >
             <LumosLogo />
-            <p className="font-bold text-inherit text-xl">Lumos Learning</p>
+            <p className="font-semibold text-inherit text-2xl">Lumos Learning</p>
         </Button>
         <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <Dropdown>
