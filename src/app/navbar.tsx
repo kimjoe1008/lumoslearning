@@ -17,7 +17,7 @@ export const LumosLogo = () => {
 
 export default function App() {
     return (
-        <Navbar>
+        <Navbar className="fixed">
           <Button
             disableRipple
             disableAnimation
