@@ -1,6 +1,7 @@
 'use client'
 import NavBar from "./navbar";
 import { Button } from "@heroui/react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +10,13 @@ export default function Home() {
       
       <div className="flex justify-center items-center min-h-screen w-2/3">
         <div className="flex w-1/3 h-auto m-3">
-          <img src="\test image.jpg" className="flex rounded-3xl"></img>
+          <Image
+            src="/Healy.jpg"
+            alt=""
+            width={1000}
+            height={1000}
+            className="rounded-3xl flex object-contain"
+          />
         </div>
         <div className="flex bg-blue-600 w-2/3 h-auto m-3 flex-col items-center">
           <div className="text-5xl font-bold pb-4">Efficient approaches to college admissions and academic success.</div>
