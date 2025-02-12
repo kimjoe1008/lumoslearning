@@ -10,12 +10,14 @@ const mg = mailgun.client({
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // ✅ Ensure only POST requests are allowed
   if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
+    return res.status(405).json({ message: "Method Not Allowed. Use POST." });
   }
 
   const { to, subject, message } = req.body;
 
+  // ✅ Ensure required fields are provided
   if (!to || !subject || !message) {
     return res.status(400).json({ message: "Missing required fields" });
   }
@@ -30,10 +32,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     return res.status(200).json({ message: "Email sent successfully!", response });
-  } catch (error: unknown) {
+  } catch (error: unknown) { // ✅ Fixed TypeScript error
     if (error instanceof Error) {
       console.error("Mailgun Error:", error);
-      return res.status(500).json({ message: "Error sending email", error: error.message });
+      return res.status(500).json({
+        message: "Error sending email",
+        error: error.message,
+      });
     }
     return res.status(500).json({ message: "Unknown error occurred" });
   }

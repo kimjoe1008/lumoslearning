@@ -9,19 +9,21 @@ export default function Consulting() {
     const sendTestEmail = async () => {
         setLoading(true);
         setMessage("");
-
+    
         try {
             const response = await fetch("/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    to: "jk1948@scarletmail.rutgers.edu", // Change to your recipient email
+                    to: "recipient@example.com", // Change to a real email
                     subject: "Test Email from Mailgun",
                     message: "This is a test email from the Consulting page!",
                 }),
             });
-
-            const data = await response.json();
+    
+            // ✅ Ensure the response is JSON, even if empty
+            const data = response.ok ? await response.json() : { message: "Unexpected error" };
+    
             if (response.ok) {
                 setMessage("✅ Email sent successfully!");
             } else {
@@ -31,9 +33,9 @@ export default function Consulting() {
             setMessage("❌ Failed to send email. Check console for errors.");
             console.error("Error sending email:", error);
         }
-
+    
         setLoading(false);
-    };
+    };    
 
     return (
         <main>
