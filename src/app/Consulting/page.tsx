@@ -11,17 +11,16 @@ export default function Consulting() {
         setMessage("");
     
         try {
-            const response = await fetch("/api/send-email", {
+            const response = await fetch("/api/send-email", { // ✅ App Router API path
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    to: "jk1948@scarletmail.rutgers.edu", // Change to a real email
+                    to: "jk1948@scarletmail.rutgers.edu",
                     subject: "Test Email from Mailgun",
                     message: "This is a test email from the Consulting page!",
                 }),
             });
     
-            // ✅ Ensure the response is JSON, even if empty
             const data = response.ok ? await response.json() : { message: "Unexpected error" };
     
             if (response.ok) {
@@ -35,7 +34,8 @@ export default function Consulting() {
         }
     
         setLoading(false);
-    };    
+    };
+    
 
     return (
         <main>
