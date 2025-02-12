@@ -19,79 +19,72 @@ export const LumosLogo = () => {
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<any>(null);
+  const [timeoutId, setTimeoutId] = useState<number | null>(null); // FIX: Explicitly type as number | null
   const delay = 300;
+
   return (
-      <Navbar maxWidth="xl" className="fixed">
-        <Link
-          className="bg-transparent p-0 flex"
-          href="\"
-        >
-          <LumosLogo />
-          <p className="font-semibold text-inherit text-3xl">Lumos Learning</p>
-        </Link>
-        <NavbarContent className="hidden sm:flex gap-4" justify="end">
-          <NavbarItem>
-            <Dropdown isOpen={isOpen}
-            disableAnimation={true}
-            >
-              <DropdownTrigger>
-                <Button
-                  onMouseEnter={() => {
-                    clearTimeout(timeoutId);
-                    setIsOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const id = setTimeout(() => setIsOpen(false), delay);
-                    setTimeoutId(id);
-                  }}
-                  disableRipple={true}
-                  disableAnimation={true}
-                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-xl"
-                >
-                  College Consulting▾
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu
+    <Navbar maxWidth="xl" className="fixed">
+      <Link className="bg-transparent p-0 flex" href="\">
+        <LumosLogo />
+        <p className="font-semibold text-inherit text-3xl">Lumos Learning</p>
+      </Link>
+      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+        <NavbarItem>
+          <Dropdown isOpen={isOpen} disableAnimation={true}>
+            <DropdownTrigger>
+              <Button
                 onMouseEnter={() => {
-                  clearTimeout(timeoutId);
+                  if (timeoutId !== null) clearTimeout(timeoutId); // FIX: Ensure timeoutId is not null
                   setIsOpen(true);
                 }}
                 onMouseLeave={() => {
-                  setIsOpen(false);
+                  const id = window.setTimeout(() => setIsOpen(false), delay); // FIX: Use window.setTimeout for correct type
+                  setTimeoutId(id);
                 }}
-                aria-label="Lumos Tutoring Consulting Menu"
-                disabledKeys={["Acceptances", "Testimonials"]}
-                className="flex"
-                itemClasses={{
-                  base: "gap-4",
-                }}
+                disableRipple={true}
+                disableAnimation={true}
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-xl"
               >
-                <DropdownItem key="Admissions Consulting Services" href="\Consulting">
-                  Admissions Consulting Services
-                </DropdownItem>
-                <DropdownItem key="College Essay Coaching" href="#">
-                  College Essay Coaching
-                </DropdownItem>
-                <DropdownItem key="About Noah" href="#">
-                  About Noah
-                </DropdownItem>
-                <DropdownItem key="Acceptances" href="#">
-                  Acceptances
-                </DropdownItem>
-                <DropdownItem key="Testimonials" href="#">
-                  Testimonials
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </NavbarItem>
-          <Button 
-          disableRipple
-          disableAnimation
-          className="text-xl bg-transparent p-0"
-          href="tel:+2016967262">(201)-696-7262
-          </Button>
-        </NavbarContent>
-      </Navbar>
+                College Consulting▾
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              onMouseEnter={() => {
+                if (timeoutId !== null) clearTimeout(timeoutId);
+                setIsOpen(true);
+              }}
+              onMouseLeave={() => {
+                setIsOpen(false);
+              }}
+              aria-label="Lumos Tutoring Consulting Menu"
+              disabledKeys={["Acceptances", "Testimonials"]}
+              className="flex"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem key="Admissions Consulting Services" href="\Consulting">
+                Admissions Consulting Services
+              </DropdownItem>
+              <DropdownItem key="College Essay Coaching" href="#">
+                College Essay Coaching
+              </DropdownItem>
+              <DropdownItem key="About Noah" href="#">
+                About Noah
+              </DropdownItem>
+              <DropdownItem key="Acceptances" href="#">
+                Acceptances
+              </DropdownItem>
+              <DropdownItem key="Testimonials" href="#">
+                Testimonials
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarItem>
+        <Button disableRipple disableAnimation className="text-xl bg-transparent p-0" href="tel:+2016967262">
+          (201)-696-7262
+        </Button>
+      </NavbarContent>
+    </Navbar>
   );
 }
