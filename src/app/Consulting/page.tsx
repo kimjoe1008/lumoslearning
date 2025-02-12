@@ -16,8 +16,8 @@ export default function Consulting() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     to: "jk1948@scarletmail.rutgers.edu",
-                    subject: "Test Email from Mailgun",
-                    message: "This is a test email from the Consulting page!",
+                    subject: "Test Email via Mailgun SMTP",
+                    message: "This is a test email sent using Mailgun SMTP in Next.js!",
                 }),
             });
     
@@ -33,7 +33,7 @@ export default function Consulting() {
         }
     
         setLoading(false);
-    };    
+    };        
     
     
 

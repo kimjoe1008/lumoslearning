@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
-import formData from "form-data";
-import Mailgun from "mailgun.js";
+import nodemailer from "nodemailer";
 
-// Initialize Mailgun client
-const mailgun = new Mailgun(formData);
-const mg = mailgun.client({
-  username: "api",
-  key: process.env.MAILGUN_API_KEY || "",
+// Configure Mailgun SMTP Transport
+const transporter = nodemailer.createTransport({
+  host: "smtp.mailgun.org",
+  port: 587, // Use 465 for SSL, 587 for TLS
+  secure: false, // false for TLS, true for SSL
+  auth: {
+    user: process.env.MAILGUN_SMTP_USER, // Your Mailgun SMTP username (postmaster@yourdomain.com)
+    pass: process.env.MAILGUN_SMTP_PASS, // Your Mailgun SMTP password
+  },
 });
 
 export async function POST(req: Request) {
@@ -17,20 +20,21 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
 
-    const response = await mg.messages.create(process.env.MAILGUN_DOMAIN || "", {
-      from: `Lumos Learning <${process.env.MAILGUN_SENDER_EMAIL}>`,
+    // Send email via Mailgun SMTP
+    await transporter.sendMail({
+      from: `"Lumos Learning" <${process.env.MAILGUN_SMTP_USER}>`, // Must match Mailgun domain
       to,
       subject,
       text: message,
       html: `<p>${message}</p>`,
     });
 
-    return NextResponse.json({ message: "Email sent successfully!", response }, { status: 200 });
+    return NextResponse.json({ message: "✅ Email sent successfully!" }, { status: 200 });
   } catch (error: unknown) {
     if (error instanceof Error) {
-      console.error("Mailgun Error:", error);
-      return NextResponse.json({ message: "Error sending email", error: error.message }, { status: 500 });
+      console.error("Mailgun SMTP Error:", error);
+      return NextResponse.json({ message: "❌ SMTP Error", error: error.message }, { status: 500 });
     }
-    return NextResponse.json({ message: "Unknown error occurred" }, { status: 500 });
+    return NextResponse.json({ message: "❌ Unknown error occurred" }, { status: 500 });
   }
 }
