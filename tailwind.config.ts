@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        backgroundgreen: "#f3fce8",
+        backgroundgreen: "#D6E6F2",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

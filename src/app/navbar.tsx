@@ -1,6 +1,8 @@
 'use client'
 
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@heroui/react";
+import { useState } from "react";
+import {Navbar, NavbarContent, NavbarItem, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@heroui/react";
+import Link from "next/link";
 
 export const LumosLogo = () => {
   return (
@@ -16,69 +18,80 @@ export const LumosLogo = () => {
 };
 
 export default function App() {
-    return (
-        <Navbar className="fixed">
-          <Button
-            disableRipple
-            disableAnimation
-            className="bg-transparent p-0"
-          >
-            <LumosLogo />
-            <p className="font-semibold text-inherit text-2xl">Lumos Learning</p>
-        </Button>
+  const [isOpen, setIsOpen] = useState(false);
+  const [timeoutId, setTimeoutId] = useState<any>(null);
+  const delay = 300;
+  return (
+      <Navbar maxWidth="xl" className="fixed">
+        <Link
+          className="bg-transparent p-0 flex"
+          href="\"
+        >
+          <LumosLogo />
+          <p className="font-semibold text-inherit text-3xl">Lumos Learning</p>
+        </Link>
         <NavbarContent className="hidden sm:flex gap-4" justify="end">
-        <Dropdown>
-            <NavbarItem>
-                <DropdownTrigger>
+          <NavbarItem>
+            <Dropdown isOpen={isOpen}
+            disableAnimation={true}
+            >
+              <DropdownTrigger>
                 <Button
-                    disableRipple
-                    disableAnimation
-                    className="p-0 bg-transparent data-[hover=true]:bg-transparent text-large"
-                    variant="flat">
-                    Features▾
+                  onMouseEnter={() => {
+                    clearTimeout(timeoutId);
+                    setIsOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    const id = setTimeout(() => setIsOpen(false), delay);
+                    setTimeoutId(id);
+                  }}
+                  disableRipple={true}
+                  disableAnimation={true}
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-xl"
+                >
+                  College Consulting▾
                 </Button>
-                </DropdownTrigger>
-            </NavbarItem>
-            <DropdownMenu
+              </DropdownTrigger>
+              <DropdownMenu
+                onMouseEnter={() => {
+                  clearTimeout(timeoutId);
+                  setIsOpen(true);
+                }}
+                onMouseLeave={() => {
+                  setIsOpen(false);
+                }}
                 aria-label="Lumos Tutoring Consulting Menu"
                 disabledKeys={["Acceptances", "Testimonials"]}
                 className="flex"
                 itemClasses={{
-                base: "gap-4",
-                }}>
-                <DropdownItem
-                key="Admissions Consulting Services"
-                href="#">
-                Admissions Consulting Services
+                  base: "gap-4",
+                }}
+              >
+                <DropdownItem key="Admissions Consulting Services" href="\Consulting">
+                  Admissions Consulting Services
                 </DropdownItem>
-
-                <DropdownItem
-                key="College Essay Coaching"
-                href="#">
-                College Essay Coaching
+                <DropdownItem key="College Essay Coaching" href="#">
+                  College Essay Coaching
                 </DropdownItem>
-
-                <DropdownItem
-                key="About Noah"
-                href="#">
-                About Noah
+                <DropdownItem key="About Noah" href="#">
+                  About Noah
                 </DropdownItem>
-                
-                <DropdownItem
-                key="Acceptances"
-                href="#">
-                Acceptances
+                <DropdownItem key="Acceptances" href="#">
+                  Acceptances
                 </DropdownItem>
-
-                <DropdownItem
-                key="Testimonials"
-                href="#">
-                Testimonials
+                <DropdownItem key="Testimonials" href="#">
+                  Testimonials
                 </DropdownItem>
-            </DropdownMenu>
+              </DropdownMenu>
             </Dropdown>
-            <div className="text-large">(201)-696-7262</div>
+          </NavbarItem>
+          <Button 
+          disableRipple
+          disableAnimation
+          className="text-xl bg-transparent p-0"
+          href="tel:+2016967262">(201)-696-7262
+          </Button>
         </NavbarContent>
-        </Navbar>
-    );
-    }
+      </Navbar>
+  );
+}
