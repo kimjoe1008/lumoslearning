@@ -15,7 +15,7 @@ export default function Consulting() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    to: "recipient@example.com", // Change to a real email
+                    to: "jk1948@scarletmail.rutgers.edu", // Change to a real email
                     subject: "Test Email from Mailgun",
                     message: "This is a test email from the Consulting page!",
                 }),
