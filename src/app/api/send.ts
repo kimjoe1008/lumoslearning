@@ -30,8 +30,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     return res.status(200).json({ message: "Email sent successfully!", response });
-  } catch (error: any) {
-    console.error("Mailgun Error:", error);
-    return res.status(500).json({ message: "Error sending email", error: error.message });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Mailgun Error:", error);
+      return res.status(500).json({ message: "Error sending email", error: error.message });
+    }
+    return res.status(500).json({ message: "Unknown error occurred" });
   }
 }
