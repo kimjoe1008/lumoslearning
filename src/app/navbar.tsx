@@ -19,7 +19,7 @@ export const LumosLogo = () => {
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<number | null>(null); // FIX: Explicitly type as number | null
+  const [timeoutId, setTimeoutId] = useState<number | null>(null);
   const delay = 300;
 
   return (
@@ -34,11 +34,11 @@ export default function App() {
             <DropdownTrigger>
               <Button
                 onMouseEnter={() => {
-                  if (timeoutId !== null) clearTimeout(timeoutId); // FIX: Ensure timeoutId is not null
+                  if (timeoutId !== null) clearTimeout(timeoutId);
                   setIsOpen(true);
                 }}
                 onMouseLeave={() => {
-                  const id = window.setTimeout(() => setIsOpen(false), delay); // FIX: Use window.setTimeout for correct type
+                  const id = window.setTimeout(() => setIsOpen(false), delay);
                   setTimeoutId(id);
                 }}
                 disableRipple={true}
