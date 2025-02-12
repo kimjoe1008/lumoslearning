@@ -11,7 +11,7 @@ export default function Consulting() {
         setMessage("");
     
         try {
-            const response = await fetch("/api/send-email", { // ✅ App Router API path
+            const response = await fetch("/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -21,20 +21,20 @@ export default function Consulting() {
                 }),
             });
     
-            const data = response.ok ? await response.json() : { message: "Unexpected error" };
-    
-            if (response.ok) {
-                setMessage("✅ Email sent successfully!");
-            } else {
-                setMessage(`❌ Error: ${data.message}`);
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: ${response.status}`);
             }
+    
+            const data = await response.json();
+            setMessage(`✅ ${data.message}`);
         } catch (error) {
-            setMessage("❌ Failed to send email. Check console for errors.");
+            setMessage("❌ Failed to send email. Check console.");
             console.error("Error sending email:", error);
         }
     
         setLoading(false);
-    };
+    };    
+    
     
 
     return (

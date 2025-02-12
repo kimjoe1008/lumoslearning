@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import formData from "form-data";
 import Mailgun from "mailgun.js";
 
@@ -9,7 +9,7 @@ const mg = mailgun.client({
   key: process.env.MAILGUN_API_KEY || "",
 });
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
     const { to, subject, message } = await req.json();
 
