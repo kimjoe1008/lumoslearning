@@ -23,7 +23,7 @@ export default function App() {
   const delay = 300;
 
   return (
-    <Navbar maxWidth="xl" className="fixed">
+    <Navbar maxWidth="xl" className="absolute max-w-screen overflow-hidden">
       <Link className="bg-transparent p-0 flex" href="\">
         <LumosLogo />
         <p className="font-semibold text-inherit text-3xl">Lumos Learning</p>
