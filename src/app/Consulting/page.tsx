@@ -10,7 +10,7 @@ export default function Consulting() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [phonenumber, setPhoneNumber] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
 
@@ -25,7 +25,7 @@ export default function Consulting() {
                 body: JSON.stringify({
                     to: "jk1948@scarletmail.rutgers.edu",
                     subject: "Consultation Request",
-                    message: "Email: ${email}<br>First Name: ${firstname}<br>Last Name: ${lastname}<br>Phone Number: ${phonenumber}<br>",
+                    message: `Email: ${email}<br>First Name: ${firstName}<br>Last Name: ${lastName}<br>Phone Number: ${phoneNumber}<br>`,
                 }),
             });
     
