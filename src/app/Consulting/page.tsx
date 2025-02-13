@@ -47,7 +47,6 @@ export default function Consulting() {
                 throw new Error(`HTTP Error! Status: ${response.status}`);
             }
     
-            const data = await response.json();
             window.location.href = '/Success'
         } catch (error) {
             setMessage("❌ Failed to submit, please check you've filled in all required fields and try again");
