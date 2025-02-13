@@ -91,7 +91,7 @@ export default function Consulting() {
                         <label htmlFor="phonenumber">Phone Number</label>
                         <input
                             type="phonenumber"
-                            value={phonenumber}
+                            value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
                             required
                             className="px-4 py-2 border rounded w-full"
