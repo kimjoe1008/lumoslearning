@@ -1,14 +1,13 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// Configure Mailgun SMTP Transport
 const transporter = nodemailer.createTransport({
   host: "smtp.mailgun.org",
-  port: 587, // Use 465 for SSL, 587 for TLS
-  secure: false, // false for TLS, true for SSL
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.MAILGUN_SMTP_USER, // Your Mailgun SMTP username (postmaster@yourdomain.com)
-    pass: process.env.MAILGUN_SMTP_PASS, // Your Mailgun SMTP password
+    user: process.env.MAILGUN_SMTP_USER,
+    pass: process.env.MAILGUN_SMTP_PASS,
   },
 });
 
@@ -20,9 +19,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
 
-    // Send email via Mailgun SMTP
     await transporter.sendMail({
-      from: `"Lumos Learning" <${process.env.MAILGUN_SMTP_USER}>`, // Must match Mailgun domain
+      from: `"Lumos Learning" <${process.env.MAILGUN_SMTP_USER}>`,
       to,
       subject,
       text: message,
