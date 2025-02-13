@@ -14,7 +14,7 @@ export default function Consulting() {
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
 
-    const sendEmail = async (e: React.FormEvent) => {
+    const sendEmail = async () => {
         setLoading(true);
         setMessage("");
     
