@@ -59,14 +59,14 @@ export default function Consulting() {
     
 
     return (
-        <main className="flex flex-col items-center min-h-screen w-full overflow-hidden font-poppins">
+        <main className="flex flex-col items-center min-h-screen w-full overflow-hidden">
             <Navbar />
-            <div className="flex flex-col items-center w-full max-w-3xl p-8 mt-20">
+            <div className="flex flex-col items-center w-full max-w-3xl p-8 mt-6">
                 <div className="w-4/5 text-4xl font-semibold text-center">
                     Fill in this short form to request a free consultation
                 </div>
                 <form onSubmit={sendEmail} className="flex flex-col gap-4 mt-4 w-full">
-                    <div className="flex">
+                    <div className="flex my-2">
                         <div className="w-full mr-2">
                             <label htmlFor="text">First Name *</label>
                             <input
@@ -90,7 +90,7 @@ export default function Consulting() {
                         
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="email">Email Address *</label>
                         <input
                             type="email"
@@ -101,7 +101,7 @@ export default function Consulting() {
                         />
                     </div>
                     
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="phonenumber">Phone Number</label>
                         <input
                             type="phonenumber"
@@ -111,7 +111,7 @@ export default function Consulting() {
                         />
                     </div>
 
-                    <div className="flex">
+                    <div className="flex my-2">
                         <div className="w-full mr-2">
                             <label htmlFor="text">City</label>
                             <input
@@ -183,7 +183,7 @@ export default function Consulting() {
                         </div>
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="relation">Relation to Applicant *</label>
                         <select
                             value={relation}
@@ -198,7 +198,7 @@ export default function Consulting() {
                         </select>
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="name">Applicant Name *</label>
                         <input
                             type="name"
@@ -209,7 +209,7 @@ export default function Consulting() {
                         />
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="reference">How did you hear about me?</label>
                         <input
                             type="reference"
@@ -219,7 +219,7 @@ export default function Consulting() {
                         />
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full my-2">
                         <label htmlFor="graduation">High School Graduation Year *</label>
                         <input
                             type="graduation"
@@ -230,7 +230,7 @@ export default function Consulting() {
                         />
                     </div>
 
-                    <div className="w-full h-40">
+                    <div className="w-full h-40 my-2">
                         <label htmlFor="extra">Please feel free to include any other information</label>
                         <textarea
                             value={extra}
