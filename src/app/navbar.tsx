@@ -23,7 +23,7 @@ export default function App() {
   const delay = 300;
 
   return (
-    <Navbar maxWidth="xl" className="absolute max-w-screen overflow-hidden">
+    <Navbar maxWidth="xl" className="absolute max-w-screen overflow-hidden bg-bgblue font-poppins">
       <Link className="bg-transparent p-0 flex" href="\">
         <LumosLogo />
         <p className="font-semibold text-inherit text-3xl">Lumos Learning</p>
@@ -69,7 +69,7 @@ export default function App() {
               <DropdownItem key="College Essay Coaching" href="#">
                 College Essay Coaching
               </DropdownItem>
-              <DropdownItem key="About Noah" href="#">
+              <DropdownItem key="About Noah" href="/AboutMe">
                 About Noah
               </DropdownItem>
               <DropdownItem key="Acceptances" href="#">

@@ -11,12 +11,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        backgroundgreen: "#D6E6F2",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bgblue: "#b1cfe6",
       },
+      fontFamily: {
+        libre: ["var(--font-libre_baskerville)", "serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      }
     },
   },
-  darkMode: "class",
   plugins: [heroui()],
 } satisfies Config;
