@@ -130,7 +130,7 @@ export const NavBar = () => {
 						</NavbarMenuItem>
 					))}
 					<NavbarMenuItem>
-						<Link className="text-xl p-0" href="tel:+2016967262">
+						<Link className="text-xl p-0" href="tel:+12016967262">
 							(201)-696-7262
 						</Link>
 					</NavbarMenuItem>
