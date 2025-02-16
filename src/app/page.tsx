@@ -2,6 +2,7 @@
 import NavBar from "./navbar";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -26,9 +27,9 @@ export default function Home() {
           <div className="text-2xl font-poppins">
             As a private tutor and college recruitment consultant for over 5 years, Noah offers a diverse array of academic services that help students identify their strengths and weaknesses, maximizing their admissions prospects and creating a long-term plan for academic enrichment and success.
           </div>
-          <div>
-            <Button disableRipple href="#" className="text-xl m-8 font-poppins bg-white">Consulting</Button>
-            <Button disableRipple href="#" className="text-xl m-8 font-poppins bg-white">Schedule</Button>
+          <div className="mt-12">
+            <Link href="/Consulting" className="text-xl m-8 font-poppins bg-white px-3 py-1.5 rounded-xl">Consulting</Link>
+            <Link href="https://calendly.com/noahktutoring/30min" className="text-xl m-8 font-poppins bg-white px-3 py-1.5 rounded-xl">Schedule</Link>
           </div>
         </div>
       </div>

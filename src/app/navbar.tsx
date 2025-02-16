@@ -63,7 +63,7 @@ export default function App() {
                 base: "gap-4",
               }}
             >
-              <DropdownItem key="Admissions Consulting Services" href="\Consulting">
+              <DropdownItem key="Admissions Consulting Services" href="/Consulting">
                 Admissions Consulting Services
               </DropdownItem>
               <DropdownItem key="College Essay Coaching" href="#">
@@ -81,9 +81,9 @@ export default function App() {
             </DropdownMenu>
           </Dropdown>
         </NavbarItem>
-        <Button disableRipple disableAnimation className="text-xl bg-transparent p-0" href="tel:+2016967262">
+        <Link className="text-xl bg-transparent p-0" href="tel:+2016967262">
           (201)-696-7262
-        </Button>
+        </Link>
       </NavbarContent>
     </Navbar>
   );
