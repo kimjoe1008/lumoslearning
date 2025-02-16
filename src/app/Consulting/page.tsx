@@ -5,7 +5,7 @@ import WhyNoah from "./whynoah";
 
 export default function Consulting() {
     return(
-        <div className="flex flex-col min-h-screen items-center w-screen">
+        <div className="flex flex-col min-h-screen items-center">
             <NavBar/>
             <WhyNoah/>
             <Services/>
