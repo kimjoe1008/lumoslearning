@@ -26,11 +26,11 @@ export default function App() {
     <Navbar maxWidth="xl" className="relative overflow-hidden bg-bgblue font-poppins md:pl-[calc(100vw-100%)] py-4">
       <Link className="bg-transparent p-0 flex" href="\">
         <LumosLogo />
-        <p className="font-semibold text-inherit text-xl lg:text-3xl">Lumos Learning</p>
+        <p className="font-semibold text-inherit text-2xl lg:text-3xl">Lumos Learning</p>
       </Link>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Dropdown isOpen={isOpen} disableAnimation={true}>
+          <Dropdown isOpen={isOpen} disableAnimation={true} shouldBlockScroll={false}>
             <DropdownTrigger>
               <Button
                 onMouseEnter={() => {
