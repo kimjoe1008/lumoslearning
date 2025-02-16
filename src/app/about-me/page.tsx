@@ -5,12 +5,12 @@ export default function AboutMe() {
     return (
         <div className="flex flex-col min-h-screen">
             <NavBar/>
-            <div className="flex flex-col lg:flex-row items-center justify-center flex-1 w-full">
-                <div className="flex xl:w-[80%] w-full">
+            <div className="flex items-center justify-center grow w-full">
+                <div className="flex flex-col lg:flex-row xl:w-[80%] w-full items-center">
                     <Image
                         src='/NoahFormal.jpg'
                         alt="Formal Image of Noah"
-                        className="object-center xl:w-[40%] w-[80%] rounded-xl mr-2 h-auto object-contain"
+                        className="object-center xl:w-[40%] w-[60%] rounded-xl mr-2 h-auto object-contain"
                         width={800}
                         height={800}
                     />

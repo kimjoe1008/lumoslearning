@@ -19,7 +19,7 @@ const DELAY = 200;
 const DROPDOWN_MENU_ITEMS = [
 	{
 		title: 'Admissions Consulting Services',
-		href: '/Consulting',
+		href: '/consulting',
 	},
 	{
 		title: 'College Essay Coaching',
@@ -27,7 +27,7 @@ const DROPDOWN_MENU_ITEMS = [
 	},
 	{
 		title: 'About Noah',
-		href: '/AboutMe',
+		href: '/about-me',
 	},
 	{
 		title: 'Acceptances',
@@ -68,7 +68,7 @@ export const NavBar = () => {
 			>
 				<Link className="flex" href="\">
 					<LumosLogo />
-					<p className="font-semibold text-xl lg:text-3xl">Lumos Learning</p>
+					<p className="font-semibold text-2xl lg:text-3xl">Lumos Learning</p>
 				</Link>
 				<NavbarContent className="hidden md:flex gap-12" justify="end">
 					<NavbarItem>
@@ -81,7 +81,7 @@ export const NavBar = () => {
 							<DropdownTrigger>
 								<Button
 									variant="light"
-									className="data-[hover=true]:bg-transparent data-[hover=true]= text-xl "
+									className="data-[hover=true]:bg-transparent data-[hover=true]= text-xl aria-expanded:scale-100 aria-expanded:opacity-100"
 									disableRipple={true}
 									disableAnimation={true}
 									onMouseEnter={handleDropdownMouseEnter}
