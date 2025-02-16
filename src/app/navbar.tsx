@@ -23,11 +23,11 @@ const DROPDOWN_MENU_ITEMS = [
 	},
 	{
 		title: 'College Essay Coaching',
-		href: '#',
+		href: '/consulting/#essaycoaching',
 	},
 	{
 		title: 'About Noah',
-		href: '/about-me',
+		href: '/consulting/#aboutnoah',
 	},
 	{
 		title: 'Acceptances',

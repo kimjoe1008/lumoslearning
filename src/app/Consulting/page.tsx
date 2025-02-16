@@ -1,4 +1,5 @@
 import { NavBar } from "../navbar";
+import AboutMe from "./about-noah";
 import Services from "./services";
 import WhyNoah from "./whynoah";
 
@@ -8,6 +9,7 @@ export default function Consulting() {
             <NavBar/>
             <WhyNoah/>
             <Services/>
+            <AboutMe/>
         </div>
     );
 }

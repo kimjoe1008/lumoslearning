@@ -27,7 +27,7 @@ export default function Services(){
                     <li className="my-2">Summer activity planning (including support for summer program essays)</li>
                 </ul>
             </div>
-            <div className="flex justify-center items-center w-full mb-10 mt-16">
+            <div className="flex justify-center items-center w-full mb-10 mt-12">
                 <div className="w-[90%] items-center">
                     <Image
                         src="/college-student.jpg"
@@ -56,7 +56,7 @@ export default function Services(){
                     <li className="my-2">College decision guidance & transition support</li>
                 </ul>
             </div>
-            <div className="flex justify-center items-center w-full mb-10 mt-16">
+            <div className="flex justify-center items-center w-full mb-10 mt-12">
                 <div className="w-[90%] items-center">
                     <Image
                         src="/student-standing.jpg"
@@ -67,8 +67,8 @@ export default function Services(){
                     />
                 </div>
             </div>
-            <div className="">
-            <div className="text-2xl">College Essay Coaching</div>
+            <div className="mb-12">
+                <div id="essaycoaching" className="text-2xl">College Essay Coaching</div>
                 <ul className="list-disc pl-5">
                     <li className="my-2">Essay prompt organization and strategy</li>
                     <li className="my-2">Topic selection</li>
