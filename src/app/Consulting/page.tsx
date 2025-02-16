@@ -28,7 +28,7 @@ export default function Consulting() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    to: "jk1948@scarletmail.rutgers.edu",
+                    to: "noahktutoring@gmail.com",
                     subject: "Consultation Request",
                     message: `Email: ${email}<br>
                     Name: ${firstName} ${lastName}<br>
@@ -59,10 +59,10 @@ export default function Consulting() {
     
 
     return (
-        <main className="flex flex-col items-center min-h-screen w-full overflow-hidden">
+        <main className="flex flex-col items-center min-h-screen w-full overflow-hidden font-poppins">
             <Navbar />
             <div className="flex flex-col items-center w-full max-w-3xl p-8 mt-20">
-                <div className="text-3xl font-semibold text-center">
+                <div className="w-4/5 text-4xl font-semibold text-center">
                     Fill in this short form to request a free consultation
                 </div>
                 <form onSubmit={sendEmail} className="flex flex-col gap-4 mt-4 w-full">

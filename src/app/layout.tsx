@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${libreBaskerville.variable} ${poppins.variable}`}>
-      <body className="bg-bgblue">
+      <body className="bg-bgblue font-poppins">
         <Providers>{children}</Providers>
       </body>
     </html>
