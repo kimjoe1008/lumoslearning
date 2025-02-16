@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Navbar from "../navbar";
+import {NavBar} from "../navbar";
 
 export default function Consulting() {
     const [loading, setLoading] = useState(false);
@@ -60,7 +60,7 @@ export default function Consulting() {
 
     return (
         <main className="flex flex-col items-center min-h-screen w-full overflow-hidden">
-            <Navbar />
+            <NavBar />
             <div className="flex flex-col items-center w-full max-w-3xl p-8 mt-6">
                 <div className="w-4/5 text-4xl font-semibold text-center">
                     Fill in this short form to request a free consultation

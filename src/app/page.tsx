@@ -1,5 +1,5 @@
 'use client'
-import NavBar from "./navbar";
+import {NavBar} from "./navbar";
 import Image from "next/image";
 import Link from "next/link";
 
