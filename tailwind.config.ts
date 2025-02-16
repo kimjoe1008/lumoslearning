@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgblue: "#b1cfe6",
+        bgblue: "#ddedff",
       },
       fontFamily: {
         libre: ["var(--font-libre_baskerville)", "serif"],
