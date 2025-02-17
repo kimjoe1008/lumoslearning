@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function AboutMe(){
     return(
-        <div id="aboutnoah" className="w-[90%] flex flex-col h-auto mt-20 lg:flex-row lg:justify-center lg:items-start">
+        <div id="aboutnoah" className="w-[90%] flex flex-col h-auto mt-20 lg:flex-row lg:justify-center lg:items-start xl:items-center">
             <div className="flex justify-center items-center w-full mb-6 lg:w-[25%]">
                 <div className="w-[90%] lg:w-full mr-2 lg:mr-8">
                     <Image
