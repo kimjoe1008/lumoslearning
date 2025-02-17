@@ -30,7 +30,7 @@ export default function Home() {
             <div className="mt-4 mb-4 w-full items-center justify-center">
               <div className="justify-center items-center flex font-semibold">
                 <Link
-                    href="/Consulting"
+                    href="/consultation"
                     className="text-xl mx-2 text-center bg-white px-3 py-2 rounded-3xl inline-block w-[175]"
                   >
                     Consulting
