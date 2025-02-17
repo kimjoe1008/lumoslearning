@@ -1,8 +1,8 @@
 'use client'
 import { useState } from "react";
-import {NavBar} from "../navbar";
+import { NavBar } from "../navbar";
 
-export default function consultation() {
+export default function Consultation() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 
