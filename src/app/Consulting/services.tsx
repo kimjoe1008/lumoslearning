@@ -20,7 +20,7 @@ export default function Services(){
                 <div className="lg:w-[55%] lg:ml-6 xl:w-[50%] xl:ml-14">
                     <div className="text-2xl xl:text-4xl">Private College Counseling</div>
                     <div className="text-lg my-4 xl:text-xl">For 9th and 10th Graders</div>
-                    <div className="text-lg my-4 xl:text-2xl">I will provide guidance for all essential college planning tasks during the first half of high school, including:</div>
+                    <div className="text-lg my-4 xl:text-xl">I will provide guidance for all essential college planning tasks during the first half of high school, including:</div>
                     <ul className="list-disc pl-5 xl:text-xl">
                         <li className="my-2">Academic advising & course selection</li>
                         <li className="my-2">Resumé building</li>
