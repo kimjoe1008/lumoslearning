@@ -19,15 +19,15 @@ const DELAY = 300;
 const DROPDOWN_MENU_ITEMS = [
 	{
 		title: 'Admissions Consulting Services',
-		href: '/consulting',
+		href: '/Consulting',
 	},
 	{
 		title: 'College Essay Coaching',
-		href: '/consulting/#essaycoaching',
+		href: '/Consulting/#essaycoaching',
 	},
 	{
 		title: 'About Noah',
-		href: '/consulting/#aboutnoah',
+		href: '/Consulting/#aboutnoah',
 	},
 	{
 		title: 'Acceptances',
