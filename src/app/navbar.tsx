@@ -70,7 +70,7 @@ export const NavBar = () => {
 					<LumosLogo />
 					<p className="font-semibold text-2xl lg:text-3xl">Lumos Learning</p>
 				</Link>
-				<NavbarContent className="hidden md:flex gap-12" justify="end">
+				<NavbarContent className="hidden lg:flex gap-12" justify="end">
 					<NavbarItem>
 						<Dropdown
 							className="bg-bgblue"
@@ -119,7 +119,7 @@ export const NavBar = () => {
 				</NavbarContent>
 				<NavbarMenuToggle
 					aria-label="Lumos Tutoring Consulting Navbar Menu"
-					className="md:hidden"
+					className="lg:hidden"
 				/>
 				<NavbarMenu className="bg-bgblue h-fit border-y border-y-default-400/40 py-4">
 					{DROPDOWN_MENU_ITEMS.map((item) => (
