@@ -12,7 +12,7 @@ export default function WhyNoah(){
               Let’s build a future they’re excited about.
             </div>
             <div className="flex w-full items-center justify-center">
-              <Link href="/Consultation" className="text-xl font-semibold mx-2 my-12 text-center bg-white px-3 py-2.5 rounded-3xl inline-block md:w-[500] xl:text-xl">Request A Free Consultation</Link>
+              <Link href="/consultation" className="text-xl font-semibold mx-2 my-12 text-center bg-white px-3 py-2.5 rounded-3xl inline-block md:w-[500] xl:text-xl">Request A Free Consultation</Link>
             </div>
           </div>
     );
