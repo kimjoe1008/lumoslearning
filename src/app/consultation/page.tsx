@@ -2,7 +2,7 @@
 import { useState } from "react";
 import {NavBar} from "../navbar";
 
-export default function Consultation() {
+export default function consultation() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 

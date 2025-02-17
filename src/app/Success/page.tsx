@@ -3,7 +3,7 @@
 import { Button } from "@heroui/react";
 import {NavBar} from "../navbar";
 
-export default function Success(){
+export default function success(){
     return(
         <main className="flex items-center justify-center min-h-screen flex-col">
             <NavBar/>
