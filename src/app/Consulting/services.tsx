@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Services(){
     return(
         <div className="flex flex-col h-auto w-[90%] lg:w-full lg:items-center">
-            <div className="text-4xl font-semibold mb-6 lg:w-[70%] xl:w-[65%] xl:text-5xl">Services</div>
-            <div className="text-lg lg:w-[70%] xl:w-[65%] xl:text-xl">I provide college admissions coaching and essay coaching to high school students of all ages including:</div>
+            <div className="text-4xl font-semibold mb-6 lg:w-[70%] xl:w-[65%] 2xl:w-[80%] xl:text-5xl">Services</div>
+            <div className="text-lg lg:w-[70%] xl:w-[65%] 2xl:w-[80%] xl:text-xl">I provide college admissions coaching and essay coaching to high school students of all ages including:</div>
             <div className="lg:flex-row lg:w-full lg:flex lg:justify-center lg:items-center mt-16 lg:mt-20 xl:mt-24">
                 <div className="flex justify-center items-center w-full mb-10 lg:mb-0 lg:w-[35%] lg:mr-6 xl:w-[30%] xl:mr-8">
                     <div className="w-[90%] lg:w-full">
