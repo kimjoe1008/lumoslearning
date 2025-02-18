@@ -60,9 +60,9 @@ export const NavBar = () => {
 	};
 
 	return (
-		<>
+		<div className="w-full md:w-[96%] lg:w-full xl:w-[89%] 2xl:w-[88%]">
 			<Navbar
-				maxWidth="xl"
+				maxWidth="full"
 				height={96}
 				className="bg-bgblue font-poppins relative"
 				shouldHideOnScroll
@@ -142,6 +142,6 @@ export const NavBar = () => {
 					</NavbarMenuItem>
 				</NavbarMenu>
 			</Navbar>
-		</>
+		</div>
 	);
 };
