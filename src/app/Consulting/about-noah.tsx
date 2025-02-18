@@ -13,7 +13,7 @@ export default function AboutMe(){
                     />
                 </div>
             </div>
-            <div className="lg:w-[70%] lg:mb-4">
+            <div className="lg:w-[70%] 2xl:w-[69%] lg:mb-4">
                 <div className="text-4xl font-semibold mb-2 xl:text-5xl">About Noah</div>
                 <p className="mb-4 xl:text-lg 2xl:text-xl">Noah’s tutoring career started five years ago in his town’s public library helping his friends with SAT problems they were having trouble with. Four years later, he’s accumulated experience teaching students of all ages, ranging from subjects such as middle school math and english to AP Calculus and SAT.  Noah’s goal is to help people achieve their academic goals in a timeframe that works for them.
                             <br></br>

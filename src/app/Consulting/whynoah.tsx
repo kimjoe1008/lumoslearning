@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function WhyNoah(){
     return(
-        <div className="flex w-[90%] lg:w-[70%] xl:w-[65%] 2xl:w-[80%] h-auto flex-col mt-6 md:mt-8 xl:mt-10">
+        <div className="flex w-[90%] lg:w-[70%] xl:w-[65%] h-auto flex-col mt-6 md:mt-8 xl:mt-10">
             <div className="flex text-3xl lg:text-4xl xl:text-5xl font-semibold pb-6 leading-[1.3] lg:leading-[1.5] xl:leading-[1.5]">
               Why Work With Noah?
             </div>
